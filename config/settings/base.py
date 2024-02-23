@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'api',
 
     'rest_framework',
+    'django_cleanup',
 ]
 
 REST_FRAMEWORK = {
