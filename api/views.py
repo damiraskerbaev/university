@@ -347,7 +347,7 @@ class University_List(APIView):
 
     def get(self, request, format=None):
         queryset = University.objects.all()
-        serializer = UniversitySerializer(queryset, many=True)
+        serializer = UniversitySerializer(queryset, many=True, context={'request': request})
         return Response(
             serializer.data,
             status=HTTP_200_OK
